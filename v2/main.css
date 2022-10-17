@@ -1,0 +1,31 @@
+html {
+    background-color: black;
+    width: fit-content;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.start-container {
+    margin: 0 auto;
+    width: fit-content;
+}
+.start-button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 50px;
+    background: transparent;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+    border: none;
+}
+.description {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: red;
+    width: fit-content;
+    margin: 0 auto;
+}
+.help {
+    color: gray;
+}

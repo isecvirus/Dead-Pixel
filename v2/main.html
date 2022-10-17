@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="dead.png">
+    <title>Dead Pixel test</title>
+</head>
+
+<body>
+    <img src="background.webp" alt="example" draggable="false" style="margin-top: 10%;">
+    <div class="start-container">
+        <button class="start-button" onclick="start(this)">test</button>
+    </div>
+</body>
+<script src="main.js"></script>
+<footer>
+    <p class="description">* this test will determine if there is any broken pixel in the monitor *</p>
+    <p class="warning">THIS TEST MIGHT HURT OR CAUSE TEMPORARILY EYES DAMAGE</p>
+    <pre class="help">
+
+
+            configure this line and put any
+            color you want to test.
+
+            rgb = ["green", "red", "blue", ..];
+        </pre>
+</footer>
+
+<script>
+    function start() {
+        document.body.style.display = "none";
+
+        rgb = ["white", "green", "red", "blue"];
+        let curr_ind = 0;
+        document.addEventListener("click", function () {
+            document.getElementById("html").style.background = rgb[curr_ind];
+            curr_ind += 1;
+
+            if (curr_ind === rgb.length) {
+                curr_ind = 0;
+            }
+        });
+    }
+</script>
+
+<style>
+    html {
+        background-color: black;
+        width: fit-content;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .start-container {
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    .start-button {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 50px;
+        background: transparent;
+        color: white;
+        user-select: none;
+        cursor: pointer;
+        border: none;
+    }
+
+    .description {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: red;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .warning {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        text-align: center;
+        background: red;
+        color: white;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .help {
+        color: gray;
+    }
+</style>
+
+</html>
